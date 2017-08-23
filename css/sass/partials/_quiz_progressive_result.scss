@@ -1,0 +1,261 @@
+.scroboard {
+    @extend %leftfull;
+    margin-top: 140px;
+    padding: 100px 68px 0px 68px;
+    background-color: #fff;
+    @extend %center;
+    margin-bottom: 94px;
+    border: 1px solid #ebebeb;
+    @include border-radius(6px);
+    @include box-shadow(box-shadow);
+    .profile-photo {
+        @extend %left;
+        margin-bottom: 24px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 100px;
+        @include border-radius(50%);
+        @extend %overflow;
+        background-color: #f1f1f1;
+        .student-profile {
+            @extend %left;
+            max-width: 100%;
+            width: 100px;
+        }
+    }
+    p.greeting {
+        @extend %leftfull;
+        margin-bottom: 4px;
+        @extend %center;
+        font-family: Roboto, sans-serif;
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: #000;
+        span.feelings {
+            img {
+                max-width: 100%;
+                width: 22px;
+            }
+        }
+    }
+    p.estimated-time {
+        @extend %leftfull;
+        margin-bottom: 36px;
+        @extend %center;
+        font-family: Roboto, sans-serif;
+        font-weight: 300;
+        font-size: 1.25rem;
+        line-height: 1.625rem;
+        color: rgba(0, 0, 0, 0.8);
+        span.time {
+            font-weight: 500;
+            color: rgba(0, 0, 0, 0.8);
+        }
+    }
+    .qiuz-series {
+        @extend %leftfull;
+        margin-bottom: 82px;
+        @extend %center;
+        button.back-to-chapter {
+            padding: 16px 32px;
+            @include border-radius(4px);
+            font-family: Roboto, sans-serif;
+            font-weight: 400;
+            font-size: 1.125rem;
+            background-color: transparent;
+            border: 1px solid #71bc57;
+            color: #71bc57;
+            outline: none;
+        }
+    }
+
+
+    .revise-section{
+        @extend %leftfull;
+    .qiuz-series {
+        @extend %left;
+        width: 50%;
+        margin-bottom: 82px;
+        @extend %center;
+        button.revise-button {
+            @extend %left;
+            margin-left: 16px;
+            width: 218px;
+            padding: 16px 10px;
+            @include border-radius(4px);
+            font-family: Roboto, sans-serif;
+            font-weight: 400;
+            font-size: 1.125rem;
+            letter-spacing: 1px;
+            background-color: transparent;
+            border: 1px solid #71bc57;
+            color: #71bc57;
+            outline: none;
+            @extend %capitalize;
+            @extend %ease;
+
+            &:hover{
+                background-color: #71bc57;
+                color: #ffffff;
+            }
+        }
+
+        button.revise-button-all {
+                @extend %right;
+                margin-right: 16px;
+        }
+    }
+    }
+
+    p.all-qu-ans {
+        @extend %leftfull;
+        @extend %center;
+        font-family: Roboto, sans-serif;
+        font-weight: 700;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        color: #000;
+    }
+    p.qu-direction {
+        @extend %leftfull;
+        margin-bottom: 32px;
+        @extend %center;
+        font-family: Roboto, sans-serif;
+        font-weight: 300;
+        font-size: 1.25rem;
+        line-height: 1.625rem;
+        color: rgba(0, 0, 0, 0.8);
+    }
+    .navigation {
+        @extend %leftfull;
+        margin-bottom: 12px;
+        .question-nav {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            li {
+                display: inline-block;
+                border: 1px solid #EAEAEA;
+                margin-bottom: 10px;
+                text-transform: capitalize;
+                padding: 8px 14px;
+                margin-right: 10px;
+                background-color: #85c66f;
+                @include border-radius(6px);
+                font-family: Roboto, sans-serif;
+                font-weight: 500;
+                font-size: 1.125rem;
+                color: #fff;
+                &:last-child {
+                    margin-right: 0px;
+                }
+            }
+            .wrong-answer {
+                background-color: #c35555;
+            }
+            .skiped-question {
+                background-color: #fafafa;
+                color: #000;
+                /* border: 1px solid #EAEAEA; */
+            }
+        }
+    }
+    .qa-ans-card-padding {
+        padding-bottom: 32px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .scroboard {
+        margin-top: 56px;
+        padding: 48px 0px 0px 0px;
+        margin-bottom: 0px;
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+        .profile-photo {
+            margin-bottom: 8px;
+            width: 78px;
+            height: 78px;
+            .student-profile {
+                width: 78px;
+            }
+        }
+        p.greeting {
+            font-size: 1.5rem;
+            line-height: 2rem;
+            span.feelings {
+                img {
+                    width: 18px;
+                }
+            }
+        }
+        p.estimated-time {
+            margin-bottom: 36px;
+            font-size: 1.25rem;
+            line-height: 1.625rem;
+            span.time {}
+        }
+        .qiuz-series {
+            margin-bottom: 82px;
+            button.back-to-chapter {
+                padding: 12px 22px;
+                font-size: 1rem;
+            }
+        }
+
+        .revise-section{
+                padding: 14px;
+    margin-bottom: 10px;
+    .qiuz-series {
+        width: 100%;
+        margin-bottom: 24px;
+        button.revise-button {
+            margin-left: 0px;
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+        }
+
+        button.revise-button-all {
+                margin-right: 0px;
+        }
+    }
+    }
+
+        p.all-qu-ans {
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
+        p.qu-direction {
+            margin-bottom: 32px;
+            font-size: 1.25rem;
+            line-height: 1.625rem;
+        }
+        .navigation {
+            margin-bottom: 12px;
+            .question-nav {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                text-align: center;
+                li {
+                    margin-bottom: 10px;
+                    padding: 8px 14px;
+                    margin-right: 10px;
+                    font-size: 1.125rem;
+                    &:last-child {
+                        margin-right: 0px;
+                    }
+                }
+                .wrong-answer {}
+                .skiped-question {}
+            }
+        }
+        .qa-ans-card-padding {
+            padding-bottom: 32px;
+        }
+    }
+}

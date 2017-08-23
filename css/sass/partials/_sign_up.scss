@@ -1,0 +1,189 @@
+.sign_up_wrapper {
+    max-width: 860px;
+    width: 100%;
+    padding: 0 10px;
+    margin: 0 auto;
+    @include box-sizing(boxsizing);
+    .sign_up {
+        @extend %leftfull;
+        @extend %pos-relative;
+        margin-top: 98px;
+        @include border-radius(4px);
+        @extend %overflow;
+        padding-top: 44px;
+        background-color: #fff;
+        @extend %center;
+        @include box-shadow(box-shadow);
+        img.cross {
+            @extend %right;
+            @extend %pos-absolute;
+            z-index: 999999;
+            @extend %pointer;
+            right: 18px;
+            top: 18px;
+            width: 28px;
+            @include border-radius(50%);
+        }
+        h1.logo {
+            @extend %leftfull;
+            margin-bottom: 32px;
+            img {
+                @extend %left;
+                max-width: 100%;
+                width: 100px;
+                margin-left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        p.heading {
+            margin-bottom: 28px;
+            @extend %center;
+            font-size: 1.5625rem;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            color: #398edd;
+        }
+        form {
+            @extend %leftfull;
+            @extend %center;
+            padding: 0 14%;
+            input {
+                width: 100%;
+                padding: 10px 18px;
+                margin-bottom: 14px;
+                border: 1px solid #ebebeb;
+                outline: none;
+                font-size: 1rem;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 400;
+                color: #000;
+            }
+            button {
+                padding: 10px 18px;
+                margin-top: 14px;
+                margin-bottom: 46px;
+                background-color: #71bc57;
+                @include border-radius(4px);
+                letter-spacing: 1px;
+                outline: none;
+                font-size: 1rem;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 400;
+                color: #fff;
+            }
+            .conform {
+                @extend %leftfull;
+                display: none;
+                margin-bottom: 22px;
+                p.conform-text {
+                    @extend %leftfull;
+                    text-align: center;
+                    font-size: 1rem;
+                    line-height: 1.625rem;
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 300;
+                    color: rgba(0, 0, 0, 0.77);
+                }
+            }
+            .in-button {
+                margin-bottom: 10px!important;
+            }
+            p.forgot {
+                @extend %leftfull;
+                margin-bottom: 36px;
+                text-align: center;
+                @extend %center;
+                font-size: 0.875rem;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 300;
+                color: #398edd;
+            }
+        }
+        p.member {
+            @extend %leftfull;
+            @extend %center;
+            padding: 16px 0px;
+            background-color: #f6f6f6;
+            font-size: 0.875rem;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            color: rgba(0, 0, 0, 0.7);
+            a {
+                color: #71bc57;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.overlay {
+    @extend %leftfull;
+    @extend %pos-fixed;
+    top: 0px;
+    left: 0px;
+    display: none;
+    height: 100%;
+    z-index: 99999;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+@media screen and (max-width: 1440px) {
+    .sign_up_wrapper {
+        max-width: 788px;
+        .sign_up {
+            img.cross {}
+            h1.logo {
+                img {}
+            }
+            p.heading {}
+            form {
+                input {}
+                button {}
+                .conform {
+                    p.conform-text {}
+                }
+                .in-button {}
+                p.forgot {}
+            }
+            p.member {
+                a {}
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .sign_up_wrapper {
+        padding: 0px 22px;
+        .sign_up {
+            img.cross {
+                width: 18px;
+            }
+            h1.logo {
+                img {
+                    width: 68px;
+                }
+            }
+            p.heading {
+                font-size: 1.2rem;
+            }
+            form {
+                padding: 0 8%;
+                input {
+                    margin-bottom: 10px;
+                    padding: 8px 14px;
+                    font-size: 0.875rem;
+                }
+                button {}
+                .conform {
+                    p.conform-text {}
+                }
+                .in-button {}
+                p.forgot {}
+            }
+            p.member {
+                a {}
+            }
+        }
+    }
+}

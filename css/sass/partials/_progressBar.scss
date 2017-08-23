@@ -1,0 +1,40 @@
+.container55 {
+    @extend %leftfull;
+    .progressbars-wrapper {
+        width: 24%;
+        margin: 0 auto;
+        .progress_single_wrapper {
+            border: 1px solid #f3f3f3;
+            @include border-radius(6px);
+            @extend %overflow;
+            background: #fafafa;
+            .progress_single {
+                height: 6px;
+                width: 0;
+                color: white;
+                font-family: inherit;
+                background: #373c41!important;
+                span {
+                    opacity: 0!important;
+                    display: none!important;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 640px) {
+.container55 {
+    .progressbars-wrapper {
+        .progress_single_wrapper {            
+                background: #ffffff;
+            .progress_single {
+                height: 4px;
+                span {
+                }
+            }
+        }
+    }
+}
+}

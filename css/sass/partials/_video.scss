@@ -1,0 +1,205 @@
+.video-section-one-video{
+    @extend %left;
+    width: 64%;
+}
+
+.video-section{
+    @extend %leftfull;
+    margin-bottom: 30px;
+    background-color: #fff;
+    /* border: 1px solid #ebebeb; */
+    @include box-shadow(box-shadow);
+    @include border-radius(4px);
+    @extend %pos-relative;
+
+    .descriptionV{
+        @extend %leftfull;
+        @extend %pos-relative;
+        padding: 38px 38px 68px 38px;
+        margin-bottom: 14px;
+
+        .index {
+            @extend %leftfull;
+            margin-bottom: 20px;
+            p {
+                @extend %left;
+                padding: 5px;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 500;
+                font-size: 1rem;
+                color: #fff;
+                @extend %capital;
+                @include border-radius(4px);
+            }
+            p.notes-bg {
+                background-color: #467fc5;
+            }
+            p.quiz-bg {
+                background-color: #b0672b;
+            }
+        }
+
+        h1.video-heading{
+            @extend %leftfull;
+            margin-bottom: 18px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            font-size: 1.625rem;
+            line-height: 2.125rem;
+            color: #000;
+        }
+
+        p.video-description{
+            @extend %leftfull;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            font-size: 1.125rem;
+            line-height: 1.5rem;
+            color: rgba(0, 0, 0, 0.6);
+        }
+
+        .last-seen-video {
+                    @extend %pos-absolute;
+                    right: 10px;
+                    bottom: 0;
+                    @extend %right;
+                    margin-top: 18px;
+                    span.active-name {
+                        @extend %right;
+                        font-family: Roboto, sans-serif;
+                        font-weight: 400;
+                        font-size: 0.875rem;
+                        line-height: 1rem;
+                        color: rgba(0,0,0,.7);
+                    }
+                    span.date-time {
+                        @extend %right;
+                        font-family: Roboto, sans-serif;
+                        font-weight: 300;
+                        font-size: 0.75rem;
+                        line-height: 1.375rem;
+                        color: rgba(0, 0, 0, 0.7);
+                    }
+                }
+
+    }
+
+
+
+.video-container{
+    width: 100%;
+    .videowrapper {
+        float: none;
+        -webkit-display: table;
+        -moz-display: table;
+        -ms-display: table;
+        display: table;
+        margin: 0 auto;
+        clear: both;
+        width: 100%;
+        @extend %pos-relative;
+        padding-bottom: 56.25%;
+        padding-top: 25px;
+        height: 0;
+    }
+    .videowrapper iframe {
+        @extend %pos-absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+}
+
+@media screen and (max-width: 1440px) {
+    .video-section{
+        margin-bottom: 38px;
+
+        .descriptionV{
+            padding: 26px 26px 54px 26px;
+            margin-bottom: 14px;
+
+        .index {
+                margin-bottom: 20px;
+                p {
+                    font-weight: 400;
+                    font-size: 0.875rem;
+                    padding: 3px 5px;
+                }
+                p.notes-bg {}
+                p.quiz-bg {}
+            }
+
+        h1.video-heading{
+                margin-bottom: 10px;
+                font-size: 1.375rem;
+                line-height: 2.125rem;
+            }
+
+        p.video-description{
+                font-size: 1rem;
+                line-height: 1.5rem;
+            }
+
+            .last-seen-video {
+                    span.active-name {
+                    }
+                    span.date-time {
+                    }
+                }
+
+    }
+
+.video-container{
+    .videowrapper {
+    }
+    .videowrapper iframe {
+    }
+}
+
+}
+}
+
+
+@media screen and (max-width: 640px) {
+    .video-section-one-video{
+        width: 100%;
+    }
+    .video-section{
+        margin-bottom: 18px;
+
+        .descriptionV{
+        padding: 22px 22px 42px 22px;
+        margin-bottom: 14px;
+
+        h1.video-heading{
+                margin-bottom: 10px;
+                font-size: 1.5rem;
+                line-height: 2.125rem;
+            }
+
+        p.video-description{
+                font-size: 1.125rem;
+                line-height: 1.5rem;
+            }
+
+        .last-seen-video {
+                    span.active-name {
+                    }
+                    span.date-time {
+                    }
+                }
+
+    }
+
+.video-container{
+    .videowrapper {
+    }
+    .videowrapper iframe {
+    }
+}
+
+}
+}
+

@@ -1,0 +1,51 @@
+.elapsed-time {
+        @extend %right;
+        @extend %pos-fixed;
+        z-index: 99999;
+        top: 172px;
+        right: 0;
+        padding: 6px 10px;
+        background-color: #fff;
+        @include border-radius(15px 0px 0px 15px);
+        @include box-shadow(box-shadow-time);
+        .min,
+        .sec {
+            font-size: 1.125rem;
+            font-family: Roboto, sans-serif;
+            font-weight: 500;
+        }
+    }
+
+
+@media screen and (max-width: 1440px) {
+.elapsed-time {
+            top: 136px;
+            right: 0;
+            padding: 6px 10px;
+            .min,
+            .sec {
+                font-size: 1.125rem;
+                font-family: Roboto, sans-serif;
+                font-weight: 500;
+            }
+        }
+
+}
+
+
+@media screen and (max-width: 640px) {
+.elapsed-time {
+            top: 20px;
+            right: 50%;
+            padding: 6px 10px;
+            border-radius: 12px;
+            transform: translateX(50%);
+            box-shadow: none;
+            .min,
+            .sec {
+                font-size: 1.125rem;
+                font-family: Roboto, sans-serif;
+                font-weight: 500;
+            }
+        }
+    }

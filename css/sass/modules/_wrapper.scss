@@ -1,0 +1,61 @@
+.wrapper1100 {
+    width: 100%;
+    max-width: 1148px;
+    margin: 0 auto;
+    @include box-sizing(boxsizing);
+}
+
+.wrapper968 {
+    width: 100%;
+    max-width: 968px;
+    margin: 0 auto;
+    @include box-sizing(boxsizing);
+}
+
+.top-zero-padding {
+    padding-top: 0px!important;
+}
+
+.margin-right-zero {
+    margin-right: 0px!important;
+}
+
+.mb-bg {
+    @extend %leftfull;
+    padding: 78px 12px 22px 12px!important;
+    background-color: #373c41;
+    display: none!important;
+}
+
+.wrapper-for-DashboardCards {
+    width: 80%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1440px) {
+    .wrapper-for-DashboardCards {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .wrapper-for-DashboardCards {
+        width: 100%;
+    }
+    .mb-bg {
+        display: block!important;
+    }
+    .pd-zero {
+        padding-top: 0px!important;
+    }
+}
+
+.clearfix{
+        clear: both;
+    }
+
+@media screen and (max-width: 640px) {
+    .option-box{
+        padding: 10px;
+    }
+}

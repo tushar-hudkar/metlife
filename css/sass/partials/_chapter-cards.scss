@@ -1,0 +1,307 @@
+.chapter-cards-container {
+    @extend %leftfull;
+    @include box-sizing(boxsizing);
+    padding-top: 62px;
+    .chapter-card {
+        @extend %leftfull;
+        @include border-radius(4px);
+        @extend %pos-relative;
+        background-color: #fff;
+        margin-bottom: 30px;
+        padding: 52px 38px;
+        border: 1px solid #ebebeb;
+        @include box-shadow(box-shadow);
+        .index {
+            @extend %leftfull;
+            margin-bottom: 20px;
+            p {
+                @extend %left;
+                padding: 5px;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 500;
+                font-size: 1rem;
+                color: #fff;
+                @extend %capital;
+                @include border-radius(4px);
+            }
+            p.notes-bg {
+                background-color: #467fc5;
+            }
+            p.quiz-bg {
+                background-color: #b0672b;
+            }
+        }
+        
+        .attempt-info{
+            @extend %right;
+            @extend %pos-absolute;
+            right: 32px;
+            top: 54px;
+            p{
+                @extend %left;
+                margin-right: 10px;
+                margin-top: 4px;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 400;
+                font-size: 1rem;
+                color: #000;
+            }
+            .card-state{
+                @extend %left;            
+                width: 22px;
+            }
+        }
+        h1.chapter-name {
+            @extend %leftfull;
+            margin-bottom: 18px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            font-size: 1.625rem;
+            line-height: 2.125rem;
+            color: #000;
+        }
+        p.chapter-summery {
+            @extend %leftfull;
+            margin-bottom: 32px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            font-size: 1.125rem;
+            line-height: 1.5rem;
+            color: rgba(0, 0, 0, 0.6);
+        }
+
+        button.view-notes{
+            @extend %left;
+            height: 36px;
+            background-color: #71bc57;            
+            @include border-radius(4px);
+            outline: none;
+            padding: 0px 12px;
+            color: #fff;
+            font-size: 1rem;
+            line-height: 1.75rem;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+        }
+
+        button.download-quiz{
+            @extend %left;
+            height: 36px;
+            background-color: #71bc57;            
+            @include border-radius(4px);
+            outline: none;
+            padding: 0px 12px;
+            color: #fff;
+
+            span.to-download{
+                @extend %right;
+                font-size: 1rem;
+                line-height: 1.75rem;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 400;
+                
+            }
+
+            .download-icon{
+                @extend %left;
+                margin-top: 5px;
+                font-size: 1.125rem;
+                margin-right: 12px;
+            }
+        }
+
+        p.attempt-left{
+            @extend %right;
+            margin-top: 7px;
+            font-family: Roboto,sans-serif;
+            font-size: .875rem;
+            font-weight: 300;
+            line-height: 1.375rem;
+            color: rgba(0,0,0,.8);
+
+
+            span.number{
+                font-family: Roboto,sans-serif;
+                font-size: 1rem;
+                font-weight: 700;
+                color: #000;
+            }
+        }
+
+        .last-attempted {
+                    @extend %right;
+                        margin-top: -3px;
+                    span.active-name {
+                        @extend %right;
+                        font-family: Roboto, sans-serif;
+                        font-weight: 400;
+                        font-size: 0.875rem;
+                        line-height: 1rem;
+                        color: rgba(0,0,0,.7);
+                    }
+                    span.date-time {
+                        @extend %right;
+                        font-family: Roboto, sans-serif;
+                        font-weight: 300;
+                        font-size: 0.75rem;
+                        line-height: 1.375rem;
+                        color: rgba(0, 0, 0, 0.7);
+                    }
+                }
+
+
+        button.start-learning {
+            @extend %left;
+            background-color: #71bc57;
+            /* font-size: 1.125rem; */
+            font-size: 1rem;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            color: #fff;
+            @include border-radius(4px);
+            outline: none;
+            padding: 12px 18px;
+
+
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .chapter-cards-container {
+        padding-top: 64px;
+        .chapter-card {
+            margin-bottom: 38px;
+            padding: 26px 26px;
+            .index {
+                margin-bottom: 20px;
+                p {
+                    font-weight: 400;
+                    font-size: 0.875rem;
+                    padding: 3px 5px;
+                }
+                p.notes-bg {}
+                p.quiz-bg {}
+            }
+
+            .attempt-info{
+                right: 22px;
+                top: 24px;
+                p{
+                    margin-right: 10px;
+                    margin-top: 4px;
+                    font-size: 0.875rem;
+                }
+                .card-state{         
+                    width: 18px;
+                }
+            }
+            h1.chapter-name {
+                margin-bottom: 10px;
+                font-size: 1.375rem;
+                line-height: 2.125rem;
+            }
+            p.chapter-summery {
+                margin-bottom: 32px;
+                font-size: 1rem;
+                line-height: 1.5rem;
+            }
+            button.start-learning {
+                padding: 8px 18px;
+            }
+
+            button.view-notes{
+                font-size: 0.875rem;
+            }
+
+            button.download-quiz{
+
+            span.to-download{
+                font-size: 0.875rem;
+                
+            }
+
+            .download-icon{
+                font-size: 1rem;
+                margin-right: 8px;
+            }
+        }
+            .last-attempted {
+                    margin-top: -2px;
+                    span.active-name {
+                        font-size: 0.875rem;
+                    }
+                    span.date-time {
+                        font-size: 0.75rem;
+                        line-height: 1.375rem;
+                    }
+                }
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+
+    .clearfix{
+        clear: both;
+    }
+    .index-top-margin {
+        margin-top: 46px;
+    }
+    .chapter-cards-container {
+        padding-top: 28px;
+        .chapter-card {
+            margin-bottom: 18px;
+            padding: 22px;
+
+            button.view-notes{
+            height: 30px;
+            padding: 0px 12px;
+            font-size: 1rem;
+            line-height: 1.75rem;
+        }
+
+        button.download-quiz{
+            height: 30px;
+
+            span.to-download{
+                font-size: 1rem;
+                line-height: 1.75rem;
+                
+            }
+
+            .download-icon{
+                margin-top: 3px;
+                margin-right: 8px;
+            }
+        }
+
+        .last-attempted {
+                    span.active-name {
+                    }
+                    span.date-time {
+                    }
+                }
+
+
+            .index {
+                p {}
+                p.notes-bg {}
+                p.quiz-bg {}
+            }
+            .attempt-info{
+                right: 14px;
+                top: 24px;
+                p{
+                    margin-right: 8px;
+                }
+                .card-state{         
+                    width: 14px;
+                }
+            }
+            h1.chapter-name {}
+            p.chapter-summery {}
+            button.start-learning {}
+        }
+    }
+}

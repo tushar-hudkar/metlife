@@ -1,0 +1,219 @@
+.resultCards {
+    @extend %leftfull;
+    padding-top: 136px;
+    h3.qa-ans-heading {
+        @extend %leftfull;
+        margin-bottom: 8px;
+        @extend %center;
+        font-family: Roboto, sans-serif;
+        font-weight: 500;
+        font-size: 1.875rem;
+        line-height: 2.625rem;
+        color: rgba(0, 0, 0, 0.9);
+    }
+    .under-line {
+        @extend %leftfull;
+        @extend %center;
+        margin: 0 auto;
+        margin-bottom: 48px;
+        span.headingUnderline {
+            @extend %box;
+            margin: 0 auto;
+            height: 3px;
+            width: 4%;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+    }
+    .cards-container {
+        @extend %leftfull;
+        .card {
+            @extend %leftfull;
+            border: 1px solid #ebebeb;
+            @include box-sizing(boxsizing);
+            margin-bottom: 32px;
+            background-color: #fff;
+            @include box-shadow(box-shadow);
+            .card-subject {
+                @extend %leftfull;
+                height: 221px;
+                padding: 42px 26px 0px 26px;
+                .index {
+                    @extend %leftfull;
+                    margin-bottom: 20px;
+                    p {
+                        @extend %left;
+                        background-color: #467fc5;
+                        padding: 5px;
+                        font-family: 'Roboto', sans-serif;
+                        font-weight: 500;
+                        font-size: 1rem;
+                        color: #fff;
+                        @extend %capital;
+                        @include border-radius(4px);
+                    }
+                }
+                .intro {
+                    @extend %leftfull;
+                    @include box-sizing(boxsizing);
+                    h3.subject-name {
+                        @extend %leftfull;
+                        margin-bottom: 4px;
+                        font-size: 1.75rem;
+                        line-height: 2.25rem;
+                        font-family: 'Roboto', sans-serif;
+                        font-weight: 500;
+                        color: #000;
+                    }
+                    p.subject-detail {
+                        @extend %left;
+                        font-size: 1.125rem;
+                        line-height: 1.625rem;
+                        font-family: 'Roboto', sans-serif;
+                        font-weight: 400;
+                        color: #000;
+                    }
+                }
+            }
+            .action {
+                @extend %leftfull;
+                padding: 18px 26px;
+                background-color: #fcfcfc;
+                border-top: 1px solid #f5f5f5;
+                button.view-assesment {
+                    @extend %left;
+                    margin-top: 6px;
+                    padding: 10px 8px;
+                    @include border-radius(4px);
+                    font-family: Roboto, sans-serif;
+                    font-weight: 400;
+                    font-size: 0.875rem;
+                    background-color: transparent;
+                    border: 1px solid #71bc57;
+                    color: #71bc57;
+                    outline: none;
+                }
+                .active {
+                    @extend %right;
+                    span.active-name {
+                        @extend %right;
+                        font-family: Roboto, sans-serif;
+                        font-weight: 400;
+                        font-size: 1rem;
+                        line-height: 1.5rem;
+                        color: #000;
+                    }
+                    span.date-time {
+                        @extend %right;
+                        font-family: Roboto, sans-serif;
+                        font-weight: 300;
+                        font-size: 0.8125rem;
+                        line-height: 1.375rem;
+                        color: rgba(0, 0, 0, 0.7);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .resultCards {
+        padding-top: 136px;
+        h3.qa-ans-heading {
+            margin-bottom: 8px;
+            font-size: 1.875rem;
+            line-height: 2.625rem;
+        }
+        .under-line {
+            margin-bottom: 48px;
+            span.headingUnderline {}
+        }
+        .cards-container {
+            .card {
+                margin-bottom: 32px;
+                .card-subject {
+                    height: 200px;
+                    .index {
+                        p {}
+                    }
+                    .intro {
+                        padding: 0px;
+                        h3.subject-name {
+                            font-size: 1.75rem;
+                            line-height: 2.25rem;
+                        }
+                        p.subject-detail {
+                            font-size: 1.125rem;
+                            line-height: 1.625rem;
+                        }
+                    }
+                }
+                .action {
+                    padding: 8px 26px;
+                    button.view-assesment {
+                        margin-top: 6px;
+                        padding: 10px 8px;
+                        font-size: 0.875rem;
+                    }
+                    .active {
+                        span.active-name {
+                            font-size: 1rem;
+                            line-height: 1.5rem;
+                        }
+                        span.date-time {
+                            font-size: 0.8125rem;
+                            line-height: 1.375rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .resultCards {
+        padding-top: 88px;
+        h3.qa-ans-heading {
+            margin-bottom: 0px;
+            font-size: 1.125rem;
+            line-height: 2rem;
+        }
+        .under-line {
+            margin-bottom: 28px;
+            span.headingUnderline {
+                height: 2px;
+                width: 6%;
+            }
+        }
+        .cards-container {
+            .card {
+                margin-bottom: 18px;
+                .card-subject {
+                    height: 162px;
+                    padding: 22px;
+                    .index {
+                        p {}
+                    }
+                    .intro {
+                        padding: 0px;
+                        h3.subject-name {
+                            font-size: 1.5rem;
+                        }
+                        p.subject-detail {}
+                    }
+                }
+                .action {
+                    padding: 8px 22px;
+                    button.view-assesment {
+                        margin-top: 2px;
+                    }
+                    .active {
+                        span.active-name {}
+                        span.date-time {}
+                    }
+                }
+            }
+        }
+    }
+}

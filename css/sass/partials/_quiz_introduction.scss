@@ -1,0 +1,86 @@
+.do-dont {
+    @extend %leftfull;
+    padding-top: 42px;
+    h4.instructions {
+        @extend %leftfull;
+        font-size: 1.625rem;
+        line-height: 2rem;
+        font-family: Roboto, sans-serif;
+        font-weight: 700;
+        color: #000;
+    }
+    ul.instructions-detail {
+        @extend %leftfull;
+        padding-left: 18px;
+        li {
+            @extend %left;
+            margin-top: 26px;
+            font-size: 1.125rem;
+            line-height: 1.625rem;
+            font-family: Roboto, sans-serif;
+            font-weight: 400;
+            color: rgba(0, 0, 0, 0.6);
+        }
+
+        
+    }
+
+    .no-bullet-point{
+                list-style-type: none;
+                padding-left: 0px!important;
+        }
+        
+    hr.instructions-separator {
+        @extend %leftfull;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        margin: 48px 0px;
+    }
+}
+
+.start-button-mobile {
+    display: none!important;
+    bottom: 0!important;
+    left: 0!important;
+    position: fixed!important;
+    z-index: 999;
+}
+
+@media screen and (max-width: 1440px) {
+    .start-button-mobile {}
+    .do-dont {
+        h4.instructions {
+            font-size: 1.375rem;
+            line-height: 1.5rem;
+        }
+        ul.instructions-detail {
+            li {
+                margin-top: 22px;
+                font-size: 1.0625rem;
+            }
+        }
+        hr.instructions-separator {}
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .start-button-mobile {
+        display: block!important;
+    }
+    .do-dont {
+        padding-top: 8px;
+        padding-bottom: 78px;
+        h4.instructions {
+            margin-top: 14px;
+        }
+        ul.instructions-detail {
+            padding-left: 18px;
+            li {
+                margin-top: 26px;
+            }
+        }
+        hr.instructions-separator {
+            margin-top: 28px;
+            margin-bottom: 18px;
+        }
+    }
+}

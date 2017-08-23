@@ -1,0 +1,70 @@
+.side-nav_profile {
+    @extend %leftfull;
+    @include box-sizing(boxsizing);
+    padding: 146px 0px 48px 0px;
+    background-color: #2d333a;
+    .profile-detail {
+        @extend %leftfull;
+        padding-left: 22px;
+        .profile-photo {
+            @extend %left;
+            width: 100px;
+            height: 100px;
+            @include border-radius(50%);
+            @extend %overflow;
+            background-color: #2D333A;
+            img.student-profile {
+                @extend %left;
+                max-width: 100%;
+                width: 100px;
+            }
+        }
+        .profile-information {
+            @extend %left;
+            margin-top: 16px;
+            margin-left: 28px;
+            p.name {
+                font-size: 1.5rem;
+                line-height: 2rem;
+                color: #fff;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 500;
+            }
+            p.student-class {
+                font-size: 0.875rem;
+                line-height: 1.125rem;
+                color: rgba(255, 255, 255, 0.8);
+                font-family: 'Roboto', sans-serif;
+                font-weight: normal;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .side-nav_profile {
+        padding-top: 116px;
+        padding-bottom: 40px;
+        .profile-detail {
+            padding-left: 22px;
+            .profile-photo {
+                width: 64px;
+                height: 64px;
+                img.student-profile {
+                    width: 64px;
+                }
+            }
+            .profile-information {
+                margin-top: 12px;
+                margin-left: 20px;
+                p.name {
+                    font-size: 1rem;
+                    line-height: 1.5rem;
+                }
+                p.student-class {
+                    font-size: 0.775rem;
+                }
+            }
+        }
+    }
+}
